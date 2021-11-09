@@ -99,32 +99,73 @@ const [ , , , , , p, u] = lyrics
 /* console.log('this is the rest')
 console.dir(rest2) */
 
-console.log('this is p :')
+/* console.log('this is p :')
 console.dir(p)
 
 console.log('this is u :')
 console.dir(u)
+ */
 
+const frutas = ['manzana', 'naranja', 'uva', 'sandia', 'platano', 'manzana2']
 
-const frutas = ['manzana', 'naranja', 'uva', 'sandia', 'platano']
-
-
-//map
+/* //map
 const nroCarateres = frutas.map(fruta => fruta.length)
 
 console.log('este es el arreglo mapeado con el numero de caracteres')
+
 console.dir(nroCarateres)
+
+console.log('este es el arreglo recorrido con foreach')
+
+//foreach
+frutas.forEach(fruta => console.log(fruta.slice(0,3)))
+
+ */
+
+/* const nroManzanas = frutas.filter(fruta => fruta.indexOf('manzana') >= 0);
+
+console.log('este es el arreglo luego de filtrar las manzanas')
+console.log(nroManzanas) */
+//console.dir(nroManzanas)
+
+
+/* const frutaEncontrada = frutas.find(fruta => fruta.indexOf('manzana') >=0)
+console.log('this is the fruit finded with find method')
+console.log(frutaEncontrada) */
+
+/* const numerosPares = [1,3,5,9]
+
+const sonPares = numerosPares.every(numero => numero % 2 == 0)
+
+console.log(sonPares)
+
+
+const algunoPar = numerosPares.some(numero => numero % 2 == 0)
+console.log('some of those number are even')
+console.log(algunoPar)
+
+const nuevosNumeros = numerosPares.fill(0, 1, numerosPares.length)
+console.dir(nuevosNumeros) */
+
 
 //reduce
 
 const numerosSuma = [ 2, 5, 7, 9, 10, 12]
 
-const suma = numerosSuma.reduce((acc, valor) => acc += valor)
+var suma = 0 
+for(let i =0; i < numerosSuma.length; i++){
+    suma = suma + numerosSuma[i]
+}
+console.log('this is the result: ', suma)
 
-console.log('este valor es la suma de los elementos del arreglo: ' + suma)
+
+console.log(' this is the result with reduce method', numerosSuma.reduce((acc, numero) => acc = acc + numero, -45))
 
 
 
+const cadenas = ["Elber", "Galarga", "y", "Penelope", "Cruz"]
+
+console.log('esta es la pareja del anio: ',cadenas.reduce((acc, value) => acc+=`${value} `, '').trim())
 
 
 
